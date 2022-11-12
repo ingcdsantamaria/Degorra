@@ -29,11 +29,11 @@ Un diagrama entidad-relación, también conocido como modelo entidad relación o
 ```mermaid
 
 erDiagram
-    Carrito_Compra |--|{Articulo
-    Articulo }|--|Inventario
-    Inventario |--| Usuario_Admin
-    Carrito_Compra }|--| Usuario_Cliente
-    Carrito_Compra |--|Facturacion
+    Carrito_Compra ||--||{Articulo
+    Articulo }|--||Inventario
+    Inventario ||--|| Usuario_Admin
+    Carrito_Compra }|--|| Usuario_Cliente
+    Carrito_Compra ||--||Facturacion
     Carrito_Compra : +int UsuarioCliente_Id
     Carrito_Compra : +int Articulo_Id
     Carrito_Compra : +int Precio_Total
