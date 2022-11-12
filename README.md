@@ -39,7 +39,6 @@ erDiagram
         int Articulo_Id
         int Precio_Total
         int Cantidad
-
     }
     class Usuario_Cliente{
       int UsuarioCliente_Id
@@ -77,5 +76,4 @@ erDiagram
       int Precio_Total
       date Fecha
     }
-
 ```
