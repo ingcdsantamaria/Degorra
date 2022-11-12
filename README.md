@@ -31,7 +31,7 @@ Un diagrama entidad-relación, también conocido como modelo entidad relación o
 erDiagram
     Carrito_Compra ||--|{Articulo : Contiene
     Articulo }|--||Inventario : Esta
-    Inventario ||--|| Usuario_Admin : Es Manejado
+    Inventario ||--|| Usuario_Admin : Administra
     Carrito_Compra }|--|| Usuario_Cliente : Tiene
     Carrito_Compra ||--||Facturacion : Genera
     Carrito_Compra{
