@@ -19,3 +19,60 @@ graph TD;
     DeGorra-->Visa;
     DeGorra-->Mastercard
 ```
+
+
+
+### Diagrama de Entidad de Relaciones: 
+
+Un diagrama entidad-relación, también conocido como modelo entidad relación o ERD, es un tipo de diagrama de flujo que ilustra cómo las "entidades", como personas, objetos o conceptos, se relacionan entre sí dentro de un sistema. Los diagramas ER se usan a menudo para diseñar o depurar bases de datos relacionales en los campos de ingeniería de software, sistemas de información empresarial, educación e investigación.
+
+```mermaid
+
+classDiagram
+    Carrito_Compra <|--Articulo
+    Articulo <|--Inventario
+    Inventario <|-- Usuario_Admin
+    Carrito_Compra <|-- Usuario_Cliente
+    Carrito_Compra <|--Facturacion
+    Carrito_Compra : +int UsuarioCliente_Id
+    Carrito_Compra : +int Articulo_Id
+    Carrito_Compra : +int Precio_Total
+    Carrito_Compra : +int Cantidad
+    class Usuario_Cliente{
+      +int UsuarioCliente_Id
+      +String Nombre
+      +String Apellido
+      +String Correo
+      +String Contraseña
+      +String Rol
+    }
+    class Articulo{
+      +int Articulo_Id
+      +file Imagen
+      +String Nombre
+      +String Descripcion
+      +int Precio
+      +String Color
+      +String Categoria
+    }
+    class Inventario{
+      +int Articulo_Id
+      +int UsuarioAdmin_Id
+    }
+    class Usuario_Admin{
+      +int UsuarioAdmin_Id
+      +String Nombre
+      +String Apellido
+      +String Correo
+      +String Contraseña
+      +String Rol
+    }
+    class Facturacion{
+      +int No_orden
+      +int Articulo_Id
+      +int UsuarioCliente_Id
+      +int Precio_Total
+      +date Fecha
+    }
+
+```
