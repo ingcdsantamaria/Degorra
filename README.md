@@ -15,3 +15,12 @@ ver la variedad de productos.
 - Permitir al usuario adquirir los pedidos mediante un proceso de
 Inscripción al sitio.
 Ofrecer servicios de multimedia y consultas específicas
+
+### prueba
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
