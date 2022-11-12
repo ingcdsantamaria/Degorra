@@ -28,7 +28,7 @@ Un diagrama entidad-relación, también conocido como modelo entidad relación o
 
 ```mermaid
 
-erDiagram
+erDiagram fill black
     Usuario_Cliente ||--|{ Carrito_Compra : Tiene
     class Usuario_Cliente{
       int UsuarioCliente_Id
