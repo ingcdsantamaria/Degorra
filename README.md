@@ -34,7 +34,7 @@ erDiagram
     Inventario ||--|| Usuario_Admin : Administra
     Carrito_Compra }|--|| Usuario_Cliente : Tiene
     Carrito_Compra ||--||Facturacion : Genera
-    Carrito_Compra{
+    class Carrito_Compra{
         int UsuarioCliente_Id
         int Articulo_Id
         int Precio_Total
