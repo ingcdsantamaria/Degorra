@@ -30,16 +30,13 @@ Un diagrama entidad-relación, también conocido como modelo entidad relación o
 
 erDiagram
     Carrito_Compra ||--|{Articulo : Contiene
-    Articulo }|--||Inventario : Esta
-    Inventario ||--|| Usuario_Admin : Administra
-    Carrito_Compra }|--|| Usuario_Cliente : Tiene
-    Carrito_Compra ||--||Facturacion : Genera
     class Carrito_Compra{
         int UsuarioCliente_Id
         int Articulo_Id
         int Precio_Total
         int Cantidad
     }
+    Usuario_Cliente ||--|{ Carrito_Compra : Tiene
     class Usuario_Cliente{
       int UsuarioCliente_Id
       String Nombre
@@ -48,6 +45,7 @@ erDiagram
       String Contrasena
       String Rol
     }
+    Articulo }|--||Inventario : Esta
     class Articulo{
       int Articulo_Id
       file Imagen
@@ -57,6 +55,7 @@ erDiagram
       String Color
       String Categoria
     }
+    Inventario ||--|| Usuario_Admin : Administra
     class Inventario{
       int Articulo_Id
       int UsuarioAdmin_Id
@@ -69,6 +68,7 @@ erDiagram
       String Contrasena
       String Rol
     }
+    Facturacion ||--||Carrito_Compra : Genera
     class Facturacion{
       int No_orden
       int Articulo_Id
