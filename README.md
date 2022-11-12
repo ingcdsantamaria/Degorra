@@ -46,7 +46,7 @@ erDiagram
       String Nombre
       String Apellido
       String Correo
-      String Contraseña
+      String Contrasena
       String Rol
     }
     class Articulo{
@@ -67,7 +67,7 @@ erDiagram
       String Nombre
       String Apellido
       String Correo
-      String Contraseña
+      String Contrasena
       String Rol
     }
     class Facturacion{
