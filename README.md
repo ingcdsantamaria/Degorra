@@ -26,8 +26,9 @@ graph TD;
 
 Un diagrama entidad-relación, también conocido como modelo entidad relación o ERD, es un tipo de diagrama de flujo que ilustra cómo las "entidades", como personas, objetos o conceptos, se relacionan entre sí dentro de un sistema. Los diagramas ER se usan a menudo para diseñar o depurar bases de datos relacionales en los campos de ingeniería de software, sistemas de información empresarial, educación e investigación.
 
-```{.mermaid theme=dark}
+```mermaid
 
+%%{init: {'theme':'darkMode'}}%%
 erDiagram
     Usuario_Cliente ||--|{ Carrito_Compra : Tiene
     Usuario_Cliente{
