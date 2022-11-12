@@ -29,13 +29,6 @@ Un diagrama entidad-relación, también conocido como modelo entidad relación o
 ```mermaid
 
 erDiagram
-    Carrito_Compra ||--|{Articulo : Contiene
-    class Carrito_Compra{
-        int UsuarioCliente_Id
-        int Articulo_Id
-        int Precio_Total
-        int Cantidad
-    }
     Usuario_Cliente ||--|{ Carrito_Compra : Tiene
     class Usuario_Cliente{
       int UsuarioCliente_Id
@@ -44,6 +37,13 @@ erDiagram
       String Correo
       String Contrasena
       String Rol
+    }
+    Carrito_Compra ||--|{Articulo : Contiene
+    class Carrito_Compra{
+        int UsuarioCliente_Id
+        int Articulo_Id
+        int Precio_Total
+        int Cantidad
     }
     Articulo }|--||Inventario : Esta
     class Articulo{
