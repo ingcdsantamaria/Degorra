@@ -34,45 +34,48 @@ erDiagram
     Inventario ||--|| Usuario_Admin
     Carrito_Compra }|--|| Usuario_Cliente
     Carrito_Compra ||--||Facturacion
-    Carrito_Compra : +int UsuarioCliente_Id
-    Carrito_Compra : +int Articulo_Id
-    Carrito_Compra : +int Precio_Total
-    Carrito_Compra : +int Cantidad
+    Carrito_Compra{
+        int UsuarioCliente_Id
+        int Articulo_Id
+        int Precio_Total
+        int Cantidad
+
+    }
     class Usuario_Cliente{
-      +int UsuarioCliente_Id
-      +String Nombre
-      +String Apellido
-      +String Correo
-      +String Contraseña
-      +String Rol
+      int UsuarioCliente_Id
+      String Nombre
+      String Apellido
+      String Correo
+      String Contraseña
+      String Rol
     }
     class Articulo{
-      +int Articulo_Id
-      +file Imagen
-      +String Nombre
-      +String Descripcion
-      +int Precio
-      +String Color
-      +String Categoria
+      int Articulo_Id
+      file Imagen
+      String Nombre
+      String Descripcion
+      int Precio
+      String Color
+      String Categoria
     }
     class Inventario{
-      +int Articulo_Id
-      +int UsuarioAdmin_Id
+      int Articulo_Id
+      int UsuarioAdmin_Id
     }
     class Usuario_Admin{
-      +int UsuarioAdmin_Id
-      +String Nombre
-      +String Apellido
-      +String Correo
-      +String Contraseña
-      +String Rol
+      int UsuarioAdmin_Id
+      String Nombre
+      String Apellido
+      String Correo
+      String Contraseña
+      String Rol
     }
     class Facturacion{
-      +int No_orden
-      +int Articulo_Id
-      +int UsuarioCliente_Id
-      +int Precio_Total
-      +date Fecha
+      int No_orden
+      int Articulo_Id
+      int UsuarioCliente_Id
+      int Precio_Total
+      date Fecha
     }
 
 ```
