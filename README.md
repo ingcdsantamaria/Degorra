@@ -79,6 +79,7 @@ erDiagram
     }
 ```
 
+
 ### Diagrama de Casos de Uso: 
 Requerimiento Funcional 1(RF_001): 
 
@@ -89,5 +90,50 @@ flowchart LR
   B(["Iniciar Sesion"])
   C(["Validar Credenciales"])
   A-->B
-  B--"<<include>>"-->C
+  B--include-->C
+```
+Requerimiento Funcional 2(RF_002): 
+
+
+```mermaid
+flowchart LR
+  A([" 𓀠 Usuario Admin"])
+  B(["Crear Articulos"])
+  C(["Validar Campos de entrada"])
+  D(["Mostrar Articulo"])
+  A-->B
+  B-->C
+  D-->C
+```
+
+Requerimiento Funcional 3(RF_003): 
+
+
+```mermaid
+flowchart LR
+  A([" 𓀠 Usuario Admin"])
+  B(["Modificar Articulo"])
+  C(["Mostrar Articulo"])
+  A-->B
+  B--exclude-->C
+```
+
+Requerimiento Funcional 4(RF_004): 
+
+
+```mermaid
+flowchart LR
+  A([" 𓀠 Usuario Admin"])
+  B(["Filtrar Articulo"])
+  A-->B
+```
+
+Requerimiento Funcional 5(RF_005): 
+
+
+```mermaid
+flowchart LR
+  A([" 𓀠 Usuario Admin"])
+  B(["Eliminar Articulo"])
+  A-->B
 ```
