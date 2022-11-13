@@ -78,3 +78,16 @@ erDiagram
       date Fecha
     }
 ```
+
+### Diagrama de Casos de Uso: 
+Requerimiento Funcional 1(RF_001): 
+
+
+```mermaid
+flowchart LR
+  A(["Usuario Admin"])
+  B(["Iniciar Sesion"])
+  C(["Validar Credenciales"])
+  A-->B
+  B--"<<include>>"-->C
+```
