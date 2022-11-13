@@ -85,7 +85,7 @@ Requerimiento Funcional 1(RF_001):
 
 ```mermaid
 flowchart LR
-  A(["Usuario Admin"])
+  A([" 𓀠 Usuario Admin"])
   B(["Iniciar Sesion"])
   C(["Validar Credenciales"])
   A-->B
