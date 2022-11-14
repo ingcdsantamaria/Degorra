@@ -14,13 +14,33 @@ información.
 ver la variedad de productos.
 - Permitir al usuario adquirir los pedidos mediante un proceso de
 Inscripción al sitio.
-Ofrecer servicios de multimedia y consultas específicas
+- Ofrecer servicios de multimedia y consultas específicas.
+***
+## MOCKUPS
 
-### prueba
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+- Mockups - XD Se presentan 18 Mockups elaborados en la plataforma Adobe XD. también pueden ser consultados en el siguiente link:
+  -  [Mockups url](https://xd.adobe.com/view/ec0aa48f-f86a-463f-853e-46ff2884694b-b959/screen/cbeef32c-954d-43b6-8da0-ba0c94ec65f8/ "Mockups url")
+
+  - Ventana principal
+
+![](./mokups/mockups-vtna-principal.png)
+
+![](./mokups/mockups-vtna-principal1.png)
+
+![](./mokups/mockups-vtna-principal2.png)
+
+![](./mokups/mockups-vtna-principal3.png)
+
+  - Ventana Login
+
+![](./mokups/mockups-vtna-login.png)
+
+  - Ventana Register
+
+![](./mokups/mockups-vtna-register.png)
+
+  - Ventana Admin CRUD
+
+![](./mokups/mockups-vtna-admin.png)
+
+![](./mokups/mockups-vtna-admin1.png)
