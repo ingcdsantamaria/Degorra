@@ -281,7 +281,7 @@ Inscripción al sitio.
 - Mockups - XD Se presentan 18 Mockups elaborados en la plataforma Adobe XD. también pueden ser consultados en el siguiente link:
   -  [Mockups url](https://xd.adobe.com/view/ec0aa48f-f86a-463f-853e-46ff2884694b-b959/screen/cbeef32c-954d-43b6-8da0-ba0c94ec65f8/ "Mockups url")
 
-  - Ventana principal
+- Ventana principal
 
 ![](./mokups/mockups-vtna-principal.png)
 
