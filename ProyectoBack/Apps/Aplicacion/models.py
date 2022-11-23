@@ -46,7 +46,7 @@ class UsuarioAdmin (models.Model):
 class Articulo (models.Model):
     idArticulo = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=30, verbose_name='nombre')
-    descripcion = models.CharField(max_length=30, verbose_name='descripcion')
+    descripcion = models.CharField(max_length=100, verbose_name='descripcion')
     precio = models.IntegerField(verbose_name='precio')
     color = models.CharField(max_length=30, verbose_name='color')
     

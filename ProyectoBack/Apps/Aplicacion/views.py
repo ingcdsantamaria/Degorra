@@ -75,9 +75,7 @@ class ReactViewArticulo_list(APIView):
             return Response(serializer.data, status=201)
 
 class ReactViewArticulo_detail(APIView):
-# def get(self, request):
-#         articulos = [{"idArticulo": articulos.idArticulo, "nombre": articulos.nombre, "descripcion": articulos.descripcion, "precio": articulos.precio, "color": articulos.color} for articulos in Articulo.objects.all()]
-#         return Response(articulos, status=200)
+
     def get(self, request, idArticulo):
         try:
             articulopk = Articulo.objects.get(idArticulo=idArticulo)
@@ -85,6 +83,7 @@ class ReactViewArticulo_detail(APIView):
             return HttpResponse(status=404)
         serializer = ArticuloSerializer(articulopk)
         return Response(serializer.data, status=200)
+
 
     def put(self, request, idArticulo):
         try:
@@ -95,6 +94,7 @@ class ReactViewArticulo_detail(APIView):
         if serializer.is_valid(raise_exception=True):
             serializer.save()
             return Response(serializer.data, status=200)
+        return Response(serializer.data, status=200)
 
     def delete(self, request, idArticulo):
         try:
@@ -103,34 +103,7 @@ class ReactViewArticulo_detail(APIView):
             return HttpResponse(status=404)
         articulopk.delete()
         return HttpResponse(status=204)
-    # @api_view(['GET', 'PUT', 'DELETE'])
-    # def articulo_details(request, idArticulo):
-    #     try:
-    #         articulo = Articulo.objects.get(idArticulo=idArticulo)
-    #     except Articulo.DoesNotExist:
-    #         return HttpResponse(status=404)
-    #     if request.method == 'GET':
-    #         serializer = ArticuloSerializer(articulo)
-    #         return JsonResponse(serializer.data)
-    #     elif request.method == 'PUT':
-    #         data = JSONParser().parse(request)
-    #         serializer = ArticuloSerializer(articulo, data=data)
-    #         if serializer.is_valid():
-    #             serializer.save()
-    #             return JsonResponse(serializer.data)
-    #         return JsonResponse(serializer.errors, status=400)
-    #     elif request.method == 'DELETE':
-    #         articulo.delete()
-    #         return HttpResponse(status=204)
 
-    # def put(self, request, idArticulo):
-    #     blog = Articulo.objects.get(idArticulo=idArticulo)
-    #     serializer = ArticuloSerializer(blog, data=request.data)
-    #     if serializer.is_valid(raise_exception=True):
-    #         serializer.save()
-    #         return Response(serializer.data, status=200)
-    #     else:
-    #         return Response(serializer.errors, status=400)
 
 
 #se creara una clase que hereda de APIView para poder crear una vista basada en clases
@@ -189,116 +162,3 @@ class ReactViewFacturacion(APIView):
             serializer.save()
             #se retorna una respuesta http al cliente en formato json con el codigo 201 que significa que la peticion fue exitosa y con los datos de la base de datos
             return Response(serializer.data, status=201)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# from django.shortcuts import render
-# from django.http.response import JsonResponse
-# from django.views import View
-# from .models import Articulo
-# from django.utils.decorators import method_decorator
-# from django.views.decorators.csrf import csrf_exempt
-# import json
-# # Create your views here.
-
-# class ArticuloView(View):
-#     @method_decorator(csrf_exempt)
-#     def dispatch(self, request, *args, **kwargs):
-#         return super().dispatch(request, *args, **kwargs)
-
-#     def get (self, request, idArticulo=0):
-#         if (idArticulo>0):
-#             articulos=list(Articulo.objects.filter(idArticulo=id).values())
-#             if len(articulos)>0:
-#                 articulo=articulos[0]
-#                 datos={'mensaje':'Articulo encontrado','articulo':articulo}
-#                 return JsonResponse(datos, safe=False, status=200)
-#             else:
-#                 datos={'mensaje':'Articulos no encontrados'}
-#                 return JsonResponse(datos, safe=False, status=404)
-#         else:
-#             articulos=list(Articulo.objects.all().values())
-#             if len(articulos)>0:
-#                 datos={'mensaje':'Articulos encontrados','articulos':articulos}
-#                 return JsonResponse(datos, safe=False, status=200)
-#             else:
-#                 datos={'mensaje':'Articulos no encontrados'}
-#                 return JsonResponse(datos, safe=False, status=404)
-
-    # def get(self, request, id=0):
-    #     if (id>0):
-    #         libros=list(Libro.objects.filter(id=id).values())
-    #         if len(libros) > 0:
-    #             libro=libros[0]
-    #             datos={'message': "success",'libro':libro}
-    #             return JsonResponse(datos)
-    #         else:
-    #             datos={'message': "Libros not found..."}
-    #             return JsonResponse(datos)
-
-    #     else:
-    #         libros =list(Libro.objects.values())
-    #         if len(libros)>0:
-    #             datos={'message': "success",'Libros':libros}
-    #         else:
-    #             datos={'message': "Libros not found..."}
-    #         return JsonResponse(datos)
-
-    # def post(self, request):
-    #     jd = json.loads(request.body)
-    #     Libro.objects.create(tipoportada_id=jd['tipoportada_id'], nombre=jd['nombre'], descripcion=jd['descripcion'], autor=jd['autor'], editorial=jd['editorial'], alto=jd['alto'], ancho=jd['ancho'],largo=jd['largo'], idioma=jd['idioma'], precio=jd['precio'], numpaginas=jd['numpaginas'], categoria=jd['categoria'], descuento=jd['descuento'], unidades=jd['unidades'], estado=jd['estado'], imagen=jd['imagen'])
-    #     datos={'message': "success"}
-    #     return JsonResponse(datos)
-
-
-    # def put(self, request, id):
-    #     jd = json.loads(request.body)
-    #     libros=list(Libro.objects.filter(id=id).values())
-    #     if len(libros) > 0:
-    #         libro=Libro.objects.get(id=id)
-    #         libro.tipoportada_id=jd['tipoportada_id']
-    #         libro.nombre=jd['nombre']
-    #         libro.descripcion=jd['descripcion']
-    #         libro.autor=jd['autor']
-    #         libro.editorial=jd['editorial']
-    #         libro.alto=jd['alto']
-    #         libro.ancho=jd['ancho']
-    #         libro.largo=jd['largo']
-    #         libro.idioma=jd['idioma']
-    #         libro.precio=jd['precio']
-    #         libro.numpaginas=jd['numpaginas']
-    #         libro.categoria=jd['categoria']
-    #         libro.descuento=jd['descuento']
-    #         libro.unidades=jd['unidades']
-    #         libro.estado=jd['estado']
-    #         libro.imagen=jd['imagen']
-    #         libro.save()
-    #         datos={'message': "success"}
-    #         return JsonResponse(datos)
-    #     else:
-    #         datos={'message': "Libros not found..."}
-
-    # def delete(self, request, id):
-    #     libros=list(Libro.objects.filter(id=id).values())
-    #     if len(libros) > 0:
-    #         Libro.objects.filter(id=id).delete()
-    #         datos={'message': "success"}
-    #     else:
-    #         datos={'message': "Libros not found..."}
-    #     return JsonResponse(datos)
