@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contedor-footer{
+    padding-left: 10px;
+    list-style-type: style none;
+}
+
+.tabla-footer-item{
+    display: inline;
+    padding: 30px;
+}
+
+.tabla-footer-item a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.contenedor-footer-copyright{
+    font-size: 12px;
+    margin-top: 50px;
+}
