@@ -304,3 +304,8 @@ Inscripción al sitio.
 ![](./mokups/mockups-vtna-admin.png)
 
 ![](./mokups/mockups-vtna-admin1.png)
+
+  - Mapa de endpoints
+
+![](./mokups/mapa_endpoints.png)
+
